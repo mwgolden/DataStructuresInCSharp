@@ -1,0 +1,9 @@
+/media/Patriot_RAID/Projects/datastructures/ds/bin/Debug/netstandard2.0/ds.deps.json
+/media/Patriot_RAID/Projects/datastructures/ds/bin/Debug/netstandard2.0/ds.dll
+/media/Patriot_RAID/Projects/datastructures/ds/bin/Debug/netstandard2.0/ds.pdb
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.csprojAssemblyReference.cache
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.AssemblyInfoInputs.cache
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.AssemblyInfo.cs
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.csproj.CoreCompileInputs.cache
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.dll
+/media/Patriot_RAID/Projects/datastructures/ds/obj/Debug/netstandard2.0/ds.pdb
