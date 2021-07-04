@@ -20,5 +20,21 @@ namespace SortingExtensions {
 
             } while(swapped == true);
         }
+        public static void SelectionSort<T>(this IList<T> collection) where T : IComparable {
+            for(int i = 0; i < collection.length() - 1; i++){                
+                T min = collection.get(i);
+                int minIndex = i;
+                for(int k = i + 1; k < collection.length(); k++){
+                    if(collection.get(k).CompareTo(min) < 0){
+                        minIndex = k;
+                        min = collection.get(minIndex);
+                    }
+                        
+                }
+                T temp = collection.get(i);
+                collection.replace(i, min);
+                collection.replace(minIndex, temp);
+            }
+        }
     }
 }
