@@ -12,17 +12,43 @@ namespace ds.tests {
 
             arr.add(32);
             arr.add(-2);
-             arr.add(10);
-
-            Console.WriteLine("List elements before selection sort:");
-            arr.display();
+            arr.add(10);
 
             arr.SelectionSort<int>();
 
-            Console.WriteLine("List elements after selection sort:");
+            Assert.True(arr.get(0) == -2 && arr.get(1) == 10 && arr.get(2) == 32, "Array successfully sorted");
+        }
+        [Fact]
+        public void SortRandomListUsinfSelectionSort(){
+            ArrayList<int> arr = new ArrayList<int>();
+            var random = new Random();
+            for(int i = 0; i < 100; i++){
+                arr.add(random.Next(101));
+            }
+
+            arr.SelectionSort();
+            for(int i = 0; i < arr.length() - 1; i++){
+                Assert.True(arr.get(i) <= arr.get(i + 1), "Array preceding value is less than or equal to the next value");
+            }
+        }
+        [Fact]
+        public void SortRandomListUsingInsertionSort(){
+            ArrayList<int> arr = new ArrayList<int>();
+            var random = new Random();
+            for(int i = 0; i < 100; i++){
+                arr.add(random.Next(101));
+            }
+            Console.WriteLine("List elements before insertion sort:");
             arr.display();
 
-            Assert.True(arr.get(0) == -2 && arr.get(1) == 10 && arr.get(2) == 32, "Array successfully sorted");
+            arr.InsertionSort();
+
+            Console.WriteLine("List elements after insertion sort:");
+            arr.display();
+
+            for(int i = 0; i < arr.length() - 1; i++){
+                Assert.True(arr.get(i) <= arr.get(i + 1), "Array preceding value is less than or equal to the next value");
+            }
         }
 
     }

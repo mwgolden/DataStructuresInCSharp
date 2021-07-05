@@ -36,5 +36,18 @@ namespace SortingExtensions {
                 collection.replace(minIndex, temp);
             }
         }
+        public static void InsertionSort<T>(this IList<T> collection) where T : IComparable {
+            //start with i = 1, because first item by itself is sorted
+            for(int i = 1; i < collection.length(); i++){
+                T unsortedItem = collection.get(i);
+                //Shift items to the right
+                int k = i - 1;
+                while (k >= 0  && unsortedItem.CompareTo(collection.get(k)) < 0){
+                    collection.replace(k + 1, collection.get(k));
+                    k--;
+                }
+                collection.replace(k + 1, unsortedItem);
+            }
+        }
     }
 }
