@@ -49,5 +49,18 @@ namespace SortingExtensions {
                 collection.replace(k + 1, unsortedItem);
             }
         }
+        public static void ShellSort<T>(this IList<T> collection) where T : IComparable {
+            int n = collection.length();
+            for(int gap = n/2; gap > 0; gap /= 2){
+                for(int i = gap; i < n; i++){
+                    T temp = collection.get(i);
+                    int j;
+                    for(j = i; j >= gap && collection.get(j - gap).CompareTo(temp) > 0; j-= gap ){
+                        collection.replace(j, collection.get(j - gap));
+                    }
+                    collection.replace(j, temp);
+                }
+            }
+        }
     }
 }

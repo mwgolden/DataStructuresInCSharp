@@ -38,12 +38,26 @@ namespace ds.tests {
             for(int i = 0; i < 100; i++){
                 arr.add(random.Next(101));
             }
-            Console.WriteLine("List elements before insertion sort:");
-            arr.display();
-
+            
             arr.InsertionSort();
 
-            Console.WriteLine("List elements after insertion sort:");
+            for(int i = 0; i < arr.length() - 1; i++){
+                Assert.True(arr.get(i) <= arr.get(i + 1), "Array preceding value is less than or equal to the next value");
+            }
+        }
+        [Fact]
+        public void SortRandomListUsingShellSort(){
+            ArrayList<int> arr = new ArrayList<int>();
+            var random = new Random();
+            for(int i = 0; i < 100; i++){
+                arr.add(random.Next(101));
+            }
+            Console.WriteLine("List elements before shell sort:");
+            arr.display();
+
+            arr.ShellSort<int>();
+
+            Console.WriteLine("List elements after shell sort:");
             arr.display();
 
             for(int i = 0; i < arr.length() - 1; i++){
